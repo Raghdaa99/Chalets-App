@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="Home"
+        android:visible="true"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favorite"
+        android:visible="true"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/booking"
+        android:icon="@drawable/ic_calendar"
+        android:title="Booking"
+        android:visible="true"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/account"
+        android:icon="@drawable/ic_account"
+        android:title="Account"
+        android:visible="true"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/ic_chat"
+        android:title="Chat"
+        android:visible="true"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/about"
+        android:icon="@drawable/ic_help"
+        android:title="About Us"
+        android:visible="true"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Logout"
+        android:visible="true"
+        app:showAsAction="always"/>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_contact"
+                android:icon="@drawable/ic_send"
+                android:title="Contact" />
+        </menu>
+    </item>
+
+</menu>

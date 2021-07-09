@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Shalehat Booking</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="log_in">Log in</string>
+    <string name="register_email_txt">Email</string>
+    <string name="register_password_txt">Password</string>
+    <string name="register_person_name_txt">Username</string>
+    <string name="register_phone_txt">Phone</string>
+    <string name="register_confirm_txt">Confirm Password</string>
+    <string name="splash_btn_sign_up">Sign up</string>
+    <string name="already_have_account">Already have an account</string>
+    <string name="night">/night</string>
+    <string name="details">This upscale, contemporary hotel is 2 km from Hazrat Shahjalal  International Airport and 11 km from Jatiyo Sangsad Bhaban,  the Bangladesh Parliament complex.</string>
+    <string name="price">Price</string>
+    <string name="reset_password">Reset Forget Password</string>
+    <string name="reset_password_message">Enter your email to get Password Reset Link</string>
+    <string name="holiday">Booking is success , We will notify you  when it have update . Thank You!</string>
+    <string name="test_client_token">eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiJleUowZVhBaU9pSktWMVFpTENKaGJHY2lPaUpGVXpJMU5pSXNJbXRwWkNJNklqSXdNVGd3TkRJMk1UWXRjMkZ1WkdKdmVDSXNJbWx6Y3lJNkltaDBkSEJ6T2k4dllYQnBMbk5oYm1SaWIzZ3VZbkpoYVc1MGNtVmxaMkYwWlhkaGVTNWpiMjBpZlEuZXlKbGVIQWlPakUyTWpJME5qRTBNalFzSW1wMGFTSTZJbUl4WXpNMVl6RTNMVFE0TkRZdE5HRmtaUzFpTldObUxXVTFPVGMzTkdGaE1UVTJaU0lzSW5OMVlpSTZJbVJ6YmpWbmNYSXljRFV6ZG5nemVIQWlMQ0pwYzNNaU9pSm9kSFJ3Y3pvdkwyRndhUzV6WVc1a1ltOTRMbUp5WVdsdWRISmxaV2RoZEdWM1lYa3VZMjl0SWl3aWJXVnlZMmhoYm5RaU9uc2ljSFZpYkdsalgybGtJam9pWkhOdU5XZHhjakp3TlROMmVETjRjQ0lzSW5abGNtbG1lVjlqWVhKa1gySjVYMlJsWm1GMWJIUWlPbVpoYkhObGZTd2ljbWxuYUhSeklqcGJJbTFoYm1GblpWOTJZWFZzZENKZExDSnpZMjl3WlNJNld5SkNjbUZwYm5SeVpXVTZWbUYxYkhRaVhTd2liM0IwYVc5dWN5STZlMzE5LlNKNW1kT2Y2RGRDbXRIZnZTVWxvV01MdXBJNEJjNHFUZzhFeE1ZWmhsaGgzOUM1OVpySHZfUTRvaTBiNEREb203amxLclhWM2s4SF9PbV9tUGlLTWpnIiwiY29uZmlnVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzL2RzbjVncXIycDUzdngzeHAvY2xpZW50X2FwaS92MS9jb25maWd1cmF0aW9uIiwiZ3JhcGhRTCI6eyJ1cmwiOiJodHRwczovL3BheW1lbnRzLnNhbmRib3guYnJhaW50cmVlLWFwaS5jb20vZ3JhcGhxbCIsImRhdGUiOiIyMDE4LTA1LTA4IiwiZmVhdHVyZXMiOlsidG9rZW5pemVfY3JlZGl0X2NhcmRzIl19LCJjbGllbnRBcGlVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvZHNuNWdxcjJwNTN2eDN4cC9jbGllbnRfYXBpIiwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwibWVyY2hhbnRJZCI6ImRzbjVncXIycDUzdngzeHAiLCJhc3NldHNVcmwiOiJodHRwczovL2Fzc2V0cy5icmFpbnRyZWVnYXRld2F5LmNvbSIsImF1dGhVcmwiOiJodHRwczovL2F1dGgudmVubW8uc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbSIsInZlbm1vIjoib2ZmIiwiY2hhbGxlbmdlcyI6W10sInRocmVlRFNlY3VyZUVuYWJsZWQiOnRydWUsImFuYWx5dGljcyI6eyJ1cmwiOiJodHRwczovL29yaWdpbi1hbmFseXRpY3Mtc2FuZC5zYW5kYm94LmJyYWludHJlZS1hcGkuY29tL2RzbjVncXIycDUzdngzeHAifSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImJpbGxpbmdBZ3JlZW1lbnRzRW5hYmxlZCI6dHJ1ZSwiZW52aXJvbm1lbnROb05ldHdvcmsiOnRydWUsInVudmV0dGVkTWVyY2hhbnQiOmZhbHNlLCJhbGxvd0h0dHAiOnRydWUsImRpc3BsYXlOYW1lIjoidW5pdmVyc2l0eSIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJicmFpbnRyZWVDbGllbnRJZCI6Im1hc3RlcmNsaWVudDMiLCJtZXJjaGFudEFjY291bnRJZCI6InVuaXZlcnNpdHkiLCJjdXJyZW5jeUlzb0NvZGUiOiJVU0QifX0=</string>
+    <string name="all_chalets">All Chalets</string>
+    <string-array name="numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string name="value_any_city">Anywhere</string>
+    <string name="value_any_price">Any price</string>
+    <string name="sorted_by_rating">sorted by rating</string>
+    <string name="sorted_by_price">sorted by price</string>
+    <string name="sorted_by_popularity">sorted by popularity</string>
+
+    <string name="fmt_num_ratings" translatable="false">(%d)</string>
+    <string name="all_restaurants">All Restaurants</string>
+    <string name="header_filters">Filter</string>
+    <string name="search">Search</string>
+
+    <string name="sort_by_rating">Sort by Rating</string>
+    <string name="sort_by_popularity">Sort by Popularity</string>
+    <string name="sort_by_price">Sort by Price</string>
+    <string-array name="cities">
+        <item>@string/value_any_city</item>
+        <item>North Gaza</item>
+        <item>Gaza</item>
+        <item>south Gaza</item>
+    </string-array>
+    <string-array name="location">
+        <item>North Gaza</item>
+        <item>Gaza</item>
+        <item>south Gaza</item>
+    </string-array>
+
+    <string name="price_1">$</string>
+    <string name="price_2">$$</string>
+    <string name="price_3">$$$</string>
+
+
+    <!-- Price filters -->
+    <string-array name="prices">
+        <item>@string/value_any_price</item>
+
+        <item>@string/price_1</item>
+        <item>@string/price_2</item>
+        <item>@string/price_3</item>
+    </string-array>
+
+    <!-- Ways you can sort restaurants -->
+    <string-array name="sort_by">
+        <item>@string/sort_by_rating</item>
+        <item>@string/sort_by_popularity</item>
+        <item>@string/sort_by_price</item>
+    </string-array>
+
+    <string name="apply">Apply</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_description">Add Description</string>
+    <string name="add_location">Add Location</string>
+    <string name="add_name">Add Name</string>
+    <string name="add_price">Add Price</string>
+    <string name="add_pictures">Add Pictures</string>
+    <string name="edit_booking">Edit Booking</string>
+    <string-array name="status_array">
+        <item>waiting </item>
+        <item>updated </item>
+    </string-array>
+
+    <string name="heading_one">Quick &amp; Easy Payments</string>
+
+    //Description
+    <string name="desc_one">Grow your Business By Accepting Card Payments with The New Card Reader</string>
+    <string name="desc_two">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="desc_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="about_me" >A Project for the Mobile Application Development 2 Course with Eng : Bushra EL Qaroute</string>
+</resources>

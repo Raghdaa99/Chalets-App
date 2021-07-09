@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_15ssp"
+        android:orientation="vertical"
+        tools:context=".admin.fragments.NewChaletFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <ImageView
+            android:id="@+id/new_img_chalet"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:src="@drawable/img_add" />
+
+        <EditText
+            android:id="@+id/ed_new_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:hint="@string/add_name" />
+
+        <EditText
+            android:id="@+id/ed_new_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_description" />
+
+        <Spinner
+            android:id="@+id/ed_new_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_location"
+            android:entries="@array/location" />
+        <EditText
+            android:id="@+id/ed_new_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Add Address" />
+
+        <EditText
+            android:id="@+id/ed_new_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/add_price" />
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Add Chalet" />
+
+        <Button
+            android:id="@+id/update_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Update"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/img_btn_more_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="@dimen/_15sdp"
+            android:src="@drawable/ic_baseline_double_arrow_24"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progress_new_chalet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:indeterminateTint="@color/colorPrimary"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

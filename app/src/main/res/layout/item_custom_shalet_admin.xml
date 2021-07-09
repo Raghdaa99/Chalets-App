@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:padding="3dp"
+    android:orientation="vertical"
+    android:elevation="10dp"
+  >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/category_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <ImageView
+            android:id="@+id/shalehat_img"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/_80sdp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img1" />
+
+        <TextView
+            android:id="@+id/shalehat_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:padding="5dp"
+            android:text="The westin dhaka"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/shalehat_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/shalehat_location"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_location"
+            android:gravity="center_vertical"
+            android:text="North Gaza"
+            app:layout_constraintEnd_toEndOf="@+id/shalehat_name"
+            app:layout_constraintStart_toStartOf="@+id/shalehat_name"
+            app:layout_constraintTop_toBottomOf="@+id/shalehat_name"
+            />
+
+        <TextView
+            android:id="@+id/shalehat_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="250"
+            android:drawableStart="@drawable/ic_money"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="@+id/shalehat_location"
+            app:layout_constraintTop_toBottomOf="@+id/shalehat_location" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/night"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="@+id/shalehat_price"
+            app:layout_constraintStart_toEndOf="@+id/shalehat_price"
+            app:layout_constraintTop_toTopOf="@+id/shalehat_price" />
+
+        <RatingBar
+            android:id="@+id/shalehat_rating"
+            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="138dp"
+            android:layout_marginRight="138dp"
+            android:rating="3.5"
+            app:layout_constraintEnd_toStartOf="@+id/ic_delete"
+            app:layout_constraintStart_toStartOf="@+id/shalehat_price"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <ImageView
+            android:id="@+id/ic_delete"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shalehat_location"
+            app:srcCompat="@drawable/ic_delete" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FBF6F6"
+    android:orientation="vertical"
+    tools:context=".view.fragments.HomeFragment">
+
+
+    <FrameLayout
+        android:id="@+id/filter_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="?attr/colorPrimary"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="12dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/filter_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:elevation="8dp"
+            android:foreground="?attr/selectableItemBackground">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/button_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_filter_list_white_24px"
+                    app:tint="@color/colorDarkGrey" />
+
+                <LinearLayout
+                    android:id="@+id/text_current_search_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/button_filter"
+                    android:orientation="vertical"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/text_current_search"
+                        style="@style/Theme.ShalehatBooking.Body1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all_chalets"
+                        android:textColor="@color/colorDarkGrey"
+                        tools:text="Filter" />
+
+                    <TextView
+                        android:id="@+id/text_current_sort_by"
+                        style="@style/Theme.ShalehatBooking.Caption"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sorted_by_rating"
+                        android:textColor="@color/greyDisabled" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/button_clear_filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    app:srcCompat="@drawable/ic_close_white_24px"
+                    app:tint="@color/greySecondary" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/filter_bar_container"
+        tools:listitem="@layout/item_custom_shalet" />
+
+    <ProgressBar
+        android:id="@+id/progress_loading"
+       android:indeterminateTint="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+       />
+</RelativeLayout>
+
