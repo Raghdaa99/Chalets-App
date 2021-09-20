@@ -1,14 +1,18 @@
 package com.example.shalehatbooking.view.fragments;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +27,7 @@ import android.widget.Toast;
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
 import com.example.shalehatbooking.MainActivity;
+import com.example.shalehatbooking.MapsActivity;
 import com.example.shalehatbooking.R;
 import com.example.shalehatbooking.dbHelper.DatabaseHandler;
 import com.example.shalehatbooking.model.Booking;
@@ -62,7 +67,7 @@ public class DetailsFragment extends Fragment implements RatingDialogListener, V
     private CollectionReference collectionReference = firebaseFirestore.collection("Shalehats");
     // private String position;
     private List<Shalehats> shalehatsList;
-    private TextView details_name_txt, details_location_txt, details_desc_txt, price_value, reviews_value, details_address_txt;
+    private TextView details_name_txt, details_location_txt, details_desc_txt, price_value, reviews_value, details_address_txt, txt_show_map;
     private RatingBar details_rating;
     private FloatingActionButton floating_rating;
     private ImageView facebook, whatsapp, instagram, telephone;
@@ -74,7 +79,7 @@ public class DetailsFragment extends Fragment implements RatingDialogListener, V
     String userId;
     private Button book_now_btn;
     private OnClickBookNext listener;
-    String imgUrl, name, facebook_uri, insta_uri, phone;
+    String imgUrl, name, facebook_uri, insta_uri, phone, Latitude, Longitude;
     double price;
 
     public DetailsFragment() {
@@ -121,6 +126,7 @@ public class DetailsFragment extends Fragment implements RatingDialogListener, V
         whatsapp.setOnClickListener(this);
         instagram.setOnClickListener(this);
         telephone.setOnClickListener(this);
+        txt_show_map.setOnClickListener(this);
         userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         shalehatsList = new ArrayList<>();
@@ -151,6 +157,8 @@ public class DetailsFragment extends Fragment implements RatingDialogListener, V
                 facebook_uri = (String) value.get("facebook");
                 insta_uri = (String) value.get("instagram");
                 phone = (String) value.get("phone");
+                Latitude = (String) value.get("Latitude");
+                Longitude = (String) value.get("Longitude");
             }
         });
         floating_rating.setOnClickListener(new View.OnClickListener() {
@@ -253,6 +261,7 @@ public class DetailsFragment extends Fragment implements RatingDialogListener, V
         details_rating = view.findViewById(R.id.details_rating);
         floating_rating = view.findViewById(R.id.floating_rating);
         details_address_txt = view.findViewById(R.id.details_address_txt);
+        txt_show_map = view.findViewById(R.id.txt_show_map);
         facebook = view.findViewById(R.id.facebook);
         whatsapp = view.findViewById(R.id.whatsapp);
         instagram = view.findViewById(R.id.instagram);
@@ -354,7 +363,15 @@ public class DetailsFragment extends Fragment implements RatingDialogListener, V
             case R.id.telephone:
                 saveToTelephone();
                 break;
+            case R.id.txt_show_map:
+                showMap();
+                break;
         }
+    }
+
+    private void showMap() {
+        listener.onClickShowMap(name,Latitude,Longitude);
+//
     }
 
     private void moveToFacebook() {
@@ -413,13 +430,18 @@ public class DetailsFragment extends Fragment implements RatingDialogListener, V
     private void saveToFavourite() {
         DatabaseHandler databaseHandler = new DatabaseHandler(getActivity());
         Favourite favourite = new Favourite(id_shalet, userId, imgUrl, name, price);
-        if (databaseHandler.insertFavourite(favourite)) {
-            Toast.makeText(getActivity(), "Added to Favourite..", Toast.LENGTH_SHORT).show();
+        if (!databaseHandler.isExist(favourite)) {
+            if (databaseHandler.insertFavourite(favourite)) {
+                Toast.makeText(getActivity(), "Added to Favourite..", Toast.LENGTH_SHORT).show();
+            }
+        }else{
+            Toast.makeText(getActivity(), "Is Already Exist", Toast.LENGTH_SHORT).show();
         }
     }
 
     public interface OnClickBookNext {
         void onClick(String idChalet);
+        void onClickShowMap(String title, String Latitude , String Longitude);
     }
 
     @Override
